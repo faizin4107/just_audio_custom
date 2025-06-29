@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio;
+package com.ryanheise.just_audio_custom;
 
 import android.content.Context;
 import androidx.annotation.NonNull;

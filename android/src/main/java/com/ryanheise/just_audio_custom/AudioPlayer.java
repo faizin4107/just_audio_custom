@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio;
+package com.ryanheise.just_audio_custom;
 
 import android.content.Context;
 import android.media.audiofx.AudioEffect;
@@ -152,10 +152,10 @@ public class AudioPlayer implements MethodCallHandler, Player.Listener, Metadata
         this.rawAudioEffects = rawAudioEffects;
         this.offloadSchedulingEnabled = offloadSchedulingEnabled != null ? offloadSchedulingEnabled : false;
         this.useLazyPreparation = useLazyPreparation;
-        methodChannel = new MethodChannel(messenger, "com.ryanheise.just_audio.methods." + id);
+        methodChannel = new MethodChannel(messenger, "com.ryanheise.just_audio_custom.methods." + id);
         methodChannel.setMethodCallHandler(this);
-        eventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.events." + id);
-        dataEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.data." + id);
+        eventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio_custom.events." + id);
+        dataEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio_custom.data." + id);
         processingState = ProcessingState.idle;
         if (audioLoadConfiguration != null) {
             Map<?, ?> loadControlMap = (Map<?, ?>)audioLoadConfiguration.get("androidLoadControl");
