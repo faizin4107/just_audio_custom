@@ -4,7 +4,7 @@ def args = ["-Xlint:deprecation","-Xlint:unchecked"]
 
 buildscript {
     ext {
-        agp_version = '8.5.2'
+        agp_version = '8.7.0'
     }
     repositories {
         google()
@@ -40,7 +40,7 @@ android {
     }
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 16
     }
 
     lintOptions {
